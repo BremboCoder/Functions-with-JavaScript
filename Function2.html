@@ -1,0 +1,45 @@
+<html>
+<!--    Ibrahim Ouenzar
+        Assignment number 7 Program 2 Functions and Random Numbers
+        Function that generate 200 random numbers in range 1 - 100. Keep count how many are odd anh how many even. Finaly, display the number of even and odd numbers generated.
+    -->
+
+<head>
+    <title>Program 2: Functions and Random Numbers</title>
+    <script>
+
+        //Define the function Rrange min - max
+        function Rrange(min, max) {
+            var range = max - min + 1; // number of values in the range
+            // to generate random numbers from the ranfe defined 
+            var randomRange = Math.floor(Math.random() * range + min);
+            // return status
+            return randomRange;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Random Number Parity Count</h1>
+    <script>
+
+        var even = 0; // set up even to 0   
+        var odd = 0; // set up odd to 0
+        for (var count = 0; count < 200; count++) {
+            var x = Rrange(1, 100);
+            //check if x is even or odd
+            if (x % 2 == 0)
+                even++; // increment even
+            else
+                odd++; // increment odd
+        }
+        // write on the screen the number times an even number has been generated the same for odd numbers    
+        document.write("The generation of 200 random numbers in the range 1 - 100 has produced: " + even + " even numbers and " + odd + " odd numbers!");
+
+
+    </script>
+</body>
+
+</html>

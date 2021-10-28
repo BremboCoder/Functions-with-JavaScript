@@ -1,0 +1,43 @@
+<html>
+<!-- Ibrahim Ouenzar
+        Assignment number 7 Program 1 Functions That Return a Value
+        Create a function that calculate the sum of fractions depending on the integrer entered by user
+    -->
+
+<head>
+    <title>Functions That Return a Value</title>
+    <script>
+
+        //define the function fractionSum
+        function fractionSum(n) {
+            // determine the range that the variable i will represent
+            for (var i = 1; i <= n; i++) {
+                // formula of the fraction sum depending on i value
+                sum += 1 / i;
+                // return status      
+                return sum;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Fraction Sum of Order n</h1>
+    <script>
+        // set up sum to 0   
+        var sum = 0;
+        // request the value of n from user    
+        var n = parseInt(prompt("Enter the value of n: "));
+        // determine the range that the variable i will represent
+        for (var i = 1; i <= n; i++) {
+            sum += 1 / i;
+        }
+        // write on the screen the order number n and the sum of fractions
+        document.write("The fraction sum of order " + n + " is " + sum + "");
+
+
+    </script>
+</body>
+
+</html>
